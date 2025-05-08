@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Bonitinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao meu Site!</h1>
+    <button id="darkModeBtn">🌙 Modo Escuro</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Olá, mundo!</h2>
+      <p>Este é um mini site bonitinho feito com carinho e café ☕.</p>
+      <button class="fancy-btn">Clique em mim!</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com ❤️ por você</p>
+  </footer>
+
+  <script>
+    // Modo escuro
+    const btn = document.getElementById('darkModeBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Ação do botão
+    const fancyBtn = document.querySelector('.fancy-btn');
+    fancyBtn.addEventListener('click', () => {
+      alert("Você clicou no botão bonitinho 😍");
+    });
+  </script>
+</body>
+</html>
