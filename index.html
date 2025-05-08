@@ -1,41 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Bonitinho</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Divertido</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>hlg360-Bem-vindo ao meu Site!</h1>
-    <button id="darkModeBtn">🌙 Modo Escuro</button>
-  </header>
+    <header>
+        <h1>Bem-vindo ao Site Divertido!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#interatividade">Interatividade</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="intro">
-      <h2>hlg360-Olá, mundo!</h2>
-      <p>hlg360-Este é um mini site bonitinho feito com carinho e café ☕.</p>
-      <button class="fancy-btn">Clique em mim!</button>
+    <section id="home" class="page">
+        <h2>Início</h2>
+        <p>Explore o nosso site! Temos jogos, desafios e uma página de interatividade.</p>
     </section>
-  </main>
 
-  <footer>
-    <p>Feito com ❤️ por você-hlg360</p>
-  </footer>
+    <section id="jogos" class="page">
+        <h2>Jogos</h2>
+        <button onclick="startGame()">Clique aqui para jogar!</button>
+        <div id="gameArea" class="gameArea">
+            <p>Jogo em andamento...</p>
+        </div>
+    </section>
 
-  <script>
-    // Modo escuro
-    const btn = document.getElementById('darkModeBtn');
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
+    <section id="interatividade" class="page">
+        <h2>Interatividade</h2>
+        <p>Clique no botão abaixo para mudar a cor do fundo!</p>
+        <button onclick="changeColor()">Mudar Cor</button>
+    </section>
 
-    // Ação do botão
-    const fancyBtn = document.querySelector('.fancy-btn');
-    fancyBtn.addEventListener('click', () => {
-      alert("Você clicou no botão bonitinho 😍");
-    });
-  </script>
+    <section id="sobre" class="page">
+        <h2>Sobre</h2>
+        <p>Este é um site feito para entreter e educar de forma divertida e interativa!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pedro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Jogo simples
+        function startGame() {
+            let gameArea = document.getElementById('gameArea');
+            gameArea.innerHTML = '<p>Você venceu o jogo!</p>';
+        }
+
+        // Função para mudar a cor do fundo
+        function changeColor() {
+            let colors = ['#f0f8ff', '#ffb6c1', '#98fb98', '#ffffe0', '#e0ffff'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
 </body>
 </html>
