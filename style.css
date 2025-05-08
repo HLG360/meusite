@@ -1,104 +1,76 @@
-/* Reset básico */
-* {
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  body {
-    background-color: #f0f0f0;
-    color: #222;
-    transition: all 0.3s ease;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section.page {
     padding: 20px;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  #darkModeBtn {
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+button {
     padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    background-color: #222;
+    background-color: #4CAF50;
     color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  #darkModeBtn:hover {
-    transform: scale(1.05);
-    background-color: #444;
-  }
-  
-  .intro {
-    text-align: center;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .intro p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-  
-  .fancy-btn {
-    background: linear-gradient(45deg, #ff4e50, #f9d423);
     border: none;
-    border-radius: 30px;
-    padding: 12px 25px;
-    color: white;
-    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  }
-  
-  .fancy-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  }
-  
-  footer {
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
     text-align: center;
-    margin-top: 40px;
-    color: #888;
-  }
-  
-  /* 🌙 Modo escuro */
-  body.dark {
-    background-color: #121212;
-    color: #eee;
-  }
-  
-  body.dark .intro {
-    background: #1e1e1e;
-    color: #eee;
-  }
-  
-  body.dark #darkModeBtn {
-    background-color: #eee;
-    color: #121212;
-  }
-  
-  body.dark .fancy-btn {
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-  }
-  
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.gameArea {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: none;
+}
